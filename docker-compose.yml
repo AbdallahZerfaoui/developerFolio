@@ -1,0 +1,11 @@
+services:
+  portfolio:
+    build: .
+    image: portfolio-image
+    container_name: portfolio-container
+    env_file: .env
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NODE_OPTIONS=--dns-result-order=ipv4first
